@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f9fa; /* Ajusta según tu diseño */
+}
+
+.header-image {
+  height: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+.nav-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 0 15px; /* Ajusta el espacio entre los elementos del menú */
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333; /* Color normal del texto */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Efecto de transición suave */
+}
+
+.menu-link:hover {
+  color: #007bff; /* Color del enlace cuando el ratón pasa por encima */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px; /* Espacio entre los iconos */
+  transition: color 0.3s ease; /* Transición para el hover */
+}
+
+.icono-personalizado {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-wrapper:hover .icono-personalizado {
+  color: #007bff; /* Color del icono cuando el ratón pasa por encima */
+}
+
+.icon-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}

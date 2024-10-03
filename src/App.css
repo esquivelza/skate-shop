@@ -1,0 +1,28 @@
+.banner {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.content-section {
+  padding: 20px;
+}
+
+.content-section section {
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.content-section p {
+  font-size: 1em;
+  line-height: 1.6;
+}

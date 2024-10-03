@@ -1,0 +1,10 @@
+.lista-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tarjeta-producto {
+  flex: 1 1 300px; 
+  max-width: 300px; 
+}
