@@ -1,18 +1,20 @@
 import React from 'react';
-import TarjetaProducto from './TarjetaProducto'; // Ajusta la ruta si es necesario
+import TarjetaProducto from './TarjetaProducto';
 import { Star } from 'lucide-react';
 import { TbSkateboarding } from 'react-icons/tb'; // Importa los iconos
 import '../estilos/ListaProducto.css';
 
-const ListaProducto = ({ categoria }) => {
+const ListaProducto = ({ categoria, onProductoClick }) => {
+  
   const productos = [
-    // Productos de ejemplo
+    // tablas
     {
       nombre: "Alien Workshop Brainwash",
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-alien-workshop-brainwash-85-.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas", // categoria del producto, con esto se selecciona a los productos
+      descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -23,7 +25,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-april-guy-1990-83.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -34,7 +36,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-april-og-logo-photo-85.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -45,7 +47,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-april-yuto-2021-80.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -56,7 +58,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-april-yuto-2021-82.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -67,7 +69,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-copal-revolucion-chiapas.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -78,7 +80,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-deathwish-trials-facchini-81.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -89,7 +91,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-girl-x-pac-man-bennett-82.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -100,7 +102,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-gx1000-og-logo-green-81.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -111,7 +113,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-ludica-nature-82.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -122,7 +124,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-taco-acuatizaje-82.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -133,7 +135,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-the-heated-wheel-coria-teatime-83.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -144,7 +146,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-toy-machine-martin-monster-82.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -155,7 +157,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-tricolor-x-el-rotulista-md-popsicle-angel-foil-80.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -166,7 +168,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-zero-misfits-fiend-skull-collage-red-85.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -177,7 +179,7 @@ const ListaProducto = ({ categoria }) => {
       precio: 120.99,
       imagen: "../../imagenes/tablas/tabla-toy-machine-martin-monster-82.jpg",
       disponible: true,
-      categoria: "tablas", // Añadir la categoría
+      categoria: "tablas",
       caracteristicas: [
         { icono: <Star size={25}/>, texto: "5 Estrellas" },
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
@@ -898,9 +900,186 @@ const ListaProducto = ({ categoria }) => {
         { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
       ]
     },
+    //truck
+    {
+      nombre: "Ace Classic",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-ace-classic-low-polished-77.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Hysteeria Krusty Hollow hi",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-hysteria-krusty-hollow-hi-149mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Hysteria Leon Rasta",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-hysteria-leon-rasta-base-amarillo-147-mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Hysteria Logo Azul",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-hysteria-logo-azul-negro.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Hysteria Logo Rojo",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-hysteria-logos-rojo-147mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Hysteria Ruega",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-hysteria-ruega-por-hysteria-base-blanca-147-mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Independent Bauhaus",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-independent-bauhaus-polished-silver-mid-144mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Independent Forged",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-independent-forged-hollow-mid-149mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Independent Stage 11 Blackout",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-independent-stage-11-blackout-standard-139mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Independent Stage 11 Forget",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-independent-stage-11-forged-hollow-btg-summit-silver-black-159mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Shivers Nava",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-shivers-nava-azul-149mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Sindicato Ms2",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-sindicato-ms2-og-logo-puas-147mm.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Venture Team",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-trucks-venture-team-green.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Venture All",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-venture-all-polished-52.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Vulkan Sirena",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-vulkan-sirena-825.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
+    {
+      nombre: "Venture Team",
+      precio: 15.99,
+      imagen: "../../imagenes/trucks/trucks-trucks-venture-team-green.jpg",
+      disponible: true,
+      categoria: "trucks",
+      caracteristicas: [
+        { icono: <Star size={25}/>, texto: "4.5 Estrellas" },
+        { icono: <TbSkateboarding size={25}/>, texto: "Envío Gratis" },
+      ]
+    },
   ];
 
-  // Filtrar productos según la categoría
+  // Filtra los productos según la categoría
   const productosFiltrados = categoria ? productos.filter(p => p.categoria === categoria) : productos;
 
   return (
@@ -913,6 +1092,8 @@ const ListaProducto = ({ categoria }) => {
           imagen={producto.imagen}
           disponible={producto.disponible}
           caracteristicas={producto.caracteristicas}
+          descripcion={producto.descripcion}
+          onClick={() => onProductoClick(producto)} //con un click llama a la funcion de la ventana modal
         />
       ))}
     </div>
@@ -920,4 +1101,3 @@ const ListaProducto = ({ categoria }) => {
 }
 
 export default ListaProducto;
-
